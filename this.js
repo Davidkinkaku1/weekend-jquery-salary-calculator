@@ -34,6 +34,9 @@ function salaryAdder(event) {
     // calling the monthly salary calculation
     totalmonthly();
 
+    // calling the color function on the excessal salary calculation
+    // salColor();
+
     // adding objects to the Domain object
     $('#table').append(`
     
@@ -55,6 +58,12 @@ function salaryAdder(event) {
     $('#Inumber').val('');
     $('#title').val('');
     $('#annualsalary').val('');
+
+
+    console.log('in salColor');
+    if (total >= 20000) {
+        $('#totalmonthly').css('color', 'red');
+    }
 
 }
 
@@ -99,4 +108,4 @@ let formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
 
-});
+}); // end of declared value to represent the currency
