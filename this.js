@@ -67,14 +67,22 @@ function salaryAdder(event) {
 
 }
 
-
 // removing event 
 function removing(event) {
     let removed = $(event.target)
+    let empRev = removed.parent().prev().prev().prev().text();
+    console.log('removing event', empRev);
     removed.closest('tr').remove();
+
+    // calculation of removed employee
+    for (let i = 0; i < salary.length; i++) {
+        if (Number(empRev) === Number(salary[i].annualsalary)) {
+            salary.splice(i, 1);
+        }
+    }
+    totalmonthly();
+
 }
-
-
 
 // TOTAL AMOUNT EVENT ON.CLICK
 function totalmonthly() {
@@ -91,14 +99,15 @@ function totalmonthly() {
 
     let postedA = $('#totalmonthly');
     postedA.empty();
-    postedA.append('Total Monthly: ', formatter.format(total));
+    postedA.append(formatter.format(total));
 
     if (total >= 20000) {
         $('#totalmonthly').css('color', 'red');
+    } else {
+        $('#totalmonthly').css('color', 'green');
     }
 
 } // end of totalmonthly
-
 
 // creating a formatter and changing the currency format   
 // Create our number formatter.
