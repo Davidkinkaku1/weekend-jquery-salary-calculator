@@ -60,10 +60,10 @@ function salaryAdder(event) {
     $('#annualsalary').val('');
 
     // if statement for color on the excessal salary calculation
-    console.log('in salColor');
-    if (total >= 20000) {
-        $('total').css('color', 'red');
-    }
+    // console.log('in salColor');
+    // if (total >= 20000) {
+    //     $('total').css('color', 'red');
+    // }
 
 }
 
@@ -83,7 +83,7 @@ function totalmonthly() {
     let total = 0;
     // running through the array of salary.annual.
     for (let i = 0; i < salary.length; i++) {
-        total += Number(salary[i].annualsalary);
+        total += Number(salary[i].annualsalary) / 12;
     }
     // seing within the salary array and pulling out the annualsalary
     console.log(`total pay: ${total}`);
@@ -93,13 +93,11 @@ function totalmonthly() {
     postedA.empty();
     postedA.append('Total Monthly: ', formatter.format(total));
 
-    // if (total >= 20000) {
-    //     document.getElementById('#totalmonthly').style.color = 'red';
-    // }
+    if (total >= 20000) {
+        $('#totalmonthly').css('color', 'red');
+    }
 
 } // end of totalmonthly
-
-
 
 
 // creating a formatter and changing the currency format   
