@@ -16,38 +16,47 @@
 
 
         <h1>Salary Calaculator</h1><br>
-        <h2>Add Employee</h2><br>
-        <label for="First-Name">First Name: </label>
-        <input id="First-Name" class="inputs" placeholder="First Name" />
-        <label for="Last-Name">Last Name: </label>
-        <input class="inputs" id="Last-Name" placeholder="Last Name" />
-        <label for="ID">ID: </label>
-        <input type="number" id="ID#" class="inputs" placeholder="ID" />
-        <label for="Annual-Salary">Annual salary: </label>
-        <input class="inputs" id="Annual-Salary" placeholder="Annual Salary" />
+        <h3>Add Employee</h3><br>
+        <label for="firstname">First Name: </label>
+        <input id="firstname" class="inputs" placeholder="First Name" />
 
-        <button id="employee-Adder">Submit</button>
+        <label for="lastname">Last Name: </label>
+        <input class="inputs" id="lastname" placeholder="Last Name" />
+
+        <label for="ID">ID: #</label>
+        <input type="number" id="Inumber" class="inputs" placeholder="ID" />
+
+        <label for="tile">Job tile: </label>
+        <input class="inputs" id="title" placeholder="Title" />
+
+        <label for="annualsalary">Annual salary: $</label>
+        <input class="inputs" id="annualsalary" placeholder="Annual Salary" />
+
+
+        <button id="employeeAdder">Submit</button><br>
         <br>
 
+        <h3>Employees</h3><br>
 
 
-
-        <table>
+        <table id="table" border="10px">
             <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Annual Salary</th>
-                <th>
-                    <div></div>
-                </th>
+                <th class="firstname">First Name</th>
+                <th class="lastname">Last Name</th>
+                <th class="Inumber">Employee ID</th>
+                <th class="title">Title</th>
+                <th class="annualsalary">Annual Salary</th>
+                <th>...</th>
+
             </tr>
 
-        </table>
 
 
-        <h3>Emmployees</h3><br>
+
+        </table><br>
+
+        <h2 id="totalmonthly">Total Monthly</h2>
+
 
 
 
