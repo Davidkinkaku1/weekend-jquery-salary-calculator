@@ -59,10 +59,10 @@ function salaryAdder(event) {
     $('#title').val('');
     $('#annualsalary').val('');
 
-
+    // if statement for color on the excessal salary calculation
     console.log('in salColor');
     if (total >= 20000) {
-        $('#totalmonthly').css('color', 'red');
+        $('total').css('color', 'red');
     }
 
 }
