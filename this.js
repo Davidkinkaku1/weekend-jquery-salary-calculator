@@ -84,9 +84,9 @@ function totalmonthly() {
     postedA.empty();
     postedA.append('Total Monthly: ', formatter.format(total));
 
-    if (total >= 20000) {
-        document.getElementById('#totalmonthly').style.color = 'red';
-    }
+    // if (total >= 20000) {
+    //     document.getElementById('#totalmonthly').style.color = 'red';
+    // }
 
 } // end of totalmonthly
 
